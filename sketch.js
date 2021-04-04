@@ -15,7 +15,12 @@ function draw() {
   mObject.y=mouseY 
   console.log("distance betweenCentre "+(fObject.width/2+mObject.width/2));
   console.log("distance betweenObject "+(fObject.x-mObject.x));
-  if(fObject.width/2+mObject.width/2===fObject.x-mObject.x){
+  if(fObject.width/2+mObject.width/2>fObject.x-mObject.x
+    && fObject.width/2+mObject.width/2>mObject.x-fObject.x
+    && fObject.width/2+mObject.width/2>fObject.y-mObject.y
+    && fObject.width/2+mObject.width/2>mObject.y-fObject.y
+    )
+{
     fObject.shapeColor="blue";
   mObject.shapeColor="blue";
   }
